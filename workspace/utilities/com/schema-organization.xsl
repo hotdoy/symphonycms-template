@@ -41,7 +41,10 @@
 				"@context": "http://schema.org",
 				"@type": "Organization",
 				"url": "<xsl:value-of select="$url" />",
-				"logo": "<xsl:value-of select="$logo" />",
+				"logo": {
+				  "@type": "ImageObject",
+				  "url": "<xsl:value-of select="$logo" />"
+				}
 				"name": "<xsl:value-of select="$name" />",
 				<xsl:if test="string-length($sameas) != 0">
 				"sameAs": [
